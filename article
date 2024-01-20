@@ -1,0 +1,16 @@
+There are so many accessibility tools coming into the frontend space; it's a thing that's been evolving rapidly in recent years. Tools that utilise the JAMstack (mostly) have been the most visible form of accessibility in frontend development. In this article, you will learn how you can create a component with MightyMeld using NextJS as its technology for building. You will learn why Next and MightyMeld are a great combination for creating components.
+
+Basically, everything here is about frontend, and if you're a frontend developer who uses Next and you're trying to make work seamless for you, this article is for you.
+
+## Prerequisites 
+
+If you're reading this article, you should have the following:
+
+- [Node 16.0](https://nodejs.org/en) or higher installed on your machine.
+- npx 5.2 or higher, although this comes with the latest npm. 
+- A basic knowledge of NextJS.
+- Knowledge of how to run a SWC plugin (that's what we will be using since we're using Next).
+
+## What is MightyMeld?
+
+MightyMeld is a visual development tool that aims to provide seamless development for React developers. It's basically used for building React applications through visualisation. Hence, what you see is what you get in this context. It allows you to drag and drop, duplicate components; it could also serve as a code generator for your components - this doesn't mean it is a code generator; it even works with the code you have/developer setup directly. 
