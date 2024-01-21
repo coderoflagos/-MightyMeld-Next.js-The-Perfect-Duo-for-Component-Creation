@@ -13,4 +13,6 @@ If you're reading this article, you should have the following:
 
 ## What is MightyMeld?
 
-MightyMeld is a visual development tool that aims to provide seamless development for React developers. It's basically used for building React applications through visualisation. Hence, what you see is what you get in this context. It allows you to drag and drop, duplicate components; it could also serve as a code generator for your components - this doesn't mean it is a code generator; it even works with the code you have/developer setup directly. 
+MightyMeld is a visual development tool that aims to provide seamless development for React developers. It's basically used for building React applications through visualisation. Hence, what you see is what you get in this context. It allows you to drag and drop, duplicate components; it could also serve as a code generator for your components - this doesn't mean it is a code generator; it even works with the code you have or developer setup directly. 
+
+ MightyMeld lets you do a lot of things; it could be seen as a frontend accessibility tool. It lets you easily modify components or your layout in either the codebase or the visual development environment. 
