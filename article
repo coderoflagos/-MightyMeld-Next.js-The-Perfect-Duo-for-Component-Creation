@@ -2,17 +2,69 @@ There are so many accessibility tools coming into the frontend space; it's a thi
 
 Basically, everything here is about frontend, and if you're a frontend developer who uses Next and you're trying to make work seamless for you, this article is for you.
 
-## Prerequisites 
+## Prerequisites
 
 If you're reading this article, you should have the following:
 
-- [Node 16.0](https://nodejs.org/en) or higher installed on your machine.
-- npx 5.2 or higher, although this comes with the latest npm. 
-- A basic knowledge of NextJS.
-- Knowledge of how to run a SWC plugin (that's what we will be using since we're using Next).
+* [Node 16.0](https://nodejs.org/en) or higher installed on your machine.
+    
+* npx 5.2 or higher, although this comes with the latest npm.
+    
+* A basic knowledge of NextJS.
+    
+* Knowledge of how to run a SWC plugin (that's what we will be using since we're using Next).
+    
 
 ## What is MightyMeld?
 
-MightyMeld is a visual development tool that aims to provide seamless development for React developers. It's basically used for building React applications through visualisation. Hence, what you see is what you get in this context. It allows you to drag and drop, duplicate components; it could also serve as a code generator for your components - this doesn't mean it is a code generator; it even works with the code you have or developer setup directly. 
+MightyMeld is a visual development tool that aims to provide seamless development for React developers. It's basically used for building React applications through visualisation. Hence, what you see is what you get in this context. It allows you to drag and drop, duplicate components; it could also serve as a code generator for your components - this doesn't mean it is a code generator; it even works with the code you have or developer setup directly.
 
- MightyMeld lets you do a lot of things; it could be seen as a frontend accessibility tool. It lets you easily modify components or your layout in either the codebase or the visual development environment. 
+MightyMeld lets you do a lot of things; it could be seen as a frontend accessibility tool. It lets you easily modify components or your layout in either the codebase or the visual development environment. As you build visually, you can always notice changes in your developer setup. Now let's get into the real deal of the article, starting out with the component. Basically, everything is based on React with MightyMeld. You may be wondering why it's great to use MightyMeld with Next for creating components - for react developers, it could be stressful to create an entire UI, so with MightyMeld, life has become super easy in such a way that you don't need to write an entire code for building components and all sorts of things. It's super powerful; it works with different tools like Vite, Chakra UI, Tailwind, etc. Let's get our hands dirty!
+
+## Creating a component with MightyMeld + Next
+
+Basically, we won't be creating an entire project from scratch; rather, we will be cloning an available one on MightyMeld's GitHub; it has Chakra UI configured in it already, so this way it has a system that works for it already. We will find out how to create a component in this section.
+
+* **Configure your developer setup**: Firstly, configure your developer environment. Start by [cloning this repository](https://github.com/mightymeld/mightymeld-next-chakra-starter-ts). That's what we will be using for everything; you can choose to modify anything at this point. After cloning the repository, install this dependency in your project:
+    
+    ```javascript
+    npm install --save-dev @mightymeld/runtime
+    ```
+    
+    After it's been successfully installed, initialize MightyMeld so that you can get your MightyMeld configs in your `mightymeld.json` file.
+    
+    ```javascript
+    npx mightymeld init
+    ```
+    
+    After this phase, you should get an instruction in your terminal just like this:
+    
+    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705917502030/50720b8a-ad3d-4ed7-b08a-8c14a3abbcf5.png align="center")
+    
+    When you see this, you have to navigate to that link to install your `mightymeld.secrets` file. Note that the file should remain private, for you only. When you navigate to the link given on your terminal, you can create a MightyMeld account or login if you have one, then you will find a button that gets you to download the secrets file. The `mightymeld.secrets` file should be in the main path of your project.
+    
+* **Getting familiar with the Visual Development Environment**: After having the `mightymeld.secrets` file, you should have your plugin setup; since we're using Next.js, we should have this code in the `next.config.js` file:
+    
+    ```javascript
+    const { pluginoptions } = require('@mightymeld/runtime');
+    
+    const nextConfig = {
+     experimental: {
+     swcPlugins: [['@mightymeld/runtime/swc-plugin-mightymeld', pluginoptions()]]
+     }
+    };
+    
+    module.exports = process.env.MIGHTYMELD ? nextConfig : {};
+    ```
+    
+    Without that configuration, you won't be able to see what you're building, that's why it's essential. Run the `npx mightymeld` command again, and you'll be redirected to the browser where you can find the MightyMeld Studio or Visual Development Environment just like this:
+    
+    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705927023797/86ef06ad-7ea9-42f0-b6b5-7e96f259a9f3.png align="center")
+    
+* **Creating a component**: Creating a component is super easy, all you have to do is navigate to the Chakra tab on the first sidebar, there is a range of default components by Chakra that you can use as seen in the image above. But in this case, we will be creating a simple button as a component.  
+      
+    Firstly, you should click on the main page; the UI where the "Mightymeld-Next-Chakra-Starter" shows, then you should find a structure pop-out in the second sidebar. Drag and drop the **button** component from the first sidebar to the second just like this:
+    
+    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705930064126/142837ad-ccdc-4fd6-b0f5-7359cc3abf76.gif align="center")
+    
+    This way, you will see the button in your UI, you can style it in the studio if you want to. After styling (not necessary),
