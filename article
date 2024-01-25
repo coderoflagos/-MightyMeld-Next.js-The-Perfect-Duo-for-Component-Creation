@@ -67,4 +67,36 @@ Basically, we won't be creating an entire project from scratch; rather, we will 
     
     ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1705930064126/142837ad-ccdc-4fd6-b0f5-7359cc3abf76.gif align="center")
     
-    This way, you will see the button in your UI, you can style it in the studio if you want to. After styling (not necessary),
+    This way, you will see the button in your UI, you can style it in the studio if you want to. After styling (not necessary), left click the **src/** directory in the **App** tab, and select the "Create new file" option. You can choose to give it any name, in this case I'll give it **Btn.tsx**. Now, left click the file name on the same sidebar, you then choose the option of creating a blank component - so, choose that.  
+    
+    ![](https://cdn.hashnode.com/res/hashnode/image/upload/v1706107095291/d6a27700-e6ee-4926-a950-e939b925b5ab.png align="center")
+    
+    Add this code to the file you created for the component, you can now embed the component provided by Chakra UI just like this:
+    
+    ```javascript
+    import { Button } from "@chakra-ui/react";
+    
+    const Example = () => {
+      return (
+      
+          <Button variant="primary">Click Me!!</Button>
+    
+      );
+    };
+    
+    export default Example;
+    ```
+    
+
+Just navigate to the path of your file, for example mine is **localhost:3000/btn**, then you can see what you've done this way, you can style it when you navigate to that path in the embedded browser on the MightyMeld Visual Development Environment. You should get something like this:
+
+![](https://cdn.hashnode.com/res/hashnode/image/upload/v1706109328519/7561e45a-ecb9-4f70-944e-a6a943ad45e7.png align="center")
+
+That's it as it's super easy!  
+There's a great synergy between NextJS and MightyMeld in component creation, it's an easier way to create components. It's really a great combination; a faster way to create components because it's all visualised, it provides some great transparency. You get to see how the code is structured and how it works in the entire project. You may be wondering why it's just a perfect combination. It's a perfect combination because of its efficiency; not just in terms of component creation, but building it's entire UI too.
+
+## Conclusion
+
+Hope you enjoyed reading this article, basically you can see this article covers two things (majorly), how to create a component in MightyMeld using Next and also how useful it can be. This article also covers how MightyMeld works with frameworks, in this context, we used Chakra UI and saw it's in-built components, we saw how they could be utilised in MightyMeld.
+
+Thanks for coming this far with me in this article. Hope to have you read my next article, see you!
